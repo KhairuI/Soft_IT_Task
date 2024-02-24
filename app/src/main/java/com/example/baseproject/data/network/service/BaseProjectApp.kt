@@ -1,4 +1,4 @@
-package com.example.baseproject.service
+package com.example.baseproject.data.network.service
 
 import android.content.Context
 import android.content.res.Configuration

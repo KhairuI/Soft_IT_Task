@@ -6,8 +6,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.WindowManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.example.baseproject.ui.base.BaseDialogFragment
-import com.example.baseproject.ui.base.BaseFragment
 import com.example.baseproject.R
 import com.example.baseproject.ui.base.BaseActivity
 
@@ -60,16 +58,4 @@ fun BaseActivity.loading(isLoading: Boolean = true) {
 
         else -> progress.hideProgress()
     }
-}
-
-fun BaseFragment.loading(isLoading: Boolean) {
-    (requireActivity() as? BaseActivity)?.loading(isLoading)
-}
-
-fun BaseDialogFragment.loading(isLoading: Boolean) {
-    (requireActivity() as? BaseActivity)?.loading(isLoading)
-}
-
-fun SwipeRefreshLayout.loading(isLoading: Boolean) {
-    isRefreshing = isLoading
 }

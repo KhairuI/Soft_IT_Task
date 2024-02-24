@@ -20,7 +20,7 @@ class ApiServiceTaskHelper @Inject constructor(
 
     operator fun invoke(): ApiServiceJobTask {
         val retrofit = Retrofit.Builder()
-            .baseUrl(AppConstants.BASE_URL2)
+            .baseUrl(AppConstants.BASE_URL)
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .client(client())

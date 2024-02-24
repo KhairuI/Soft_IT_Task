@@ -13,8 +13,6 @@ import com.example.baseproject.data.network.request.LoginRequest
 import com.example.baseproject.databinding.ActivityTaskBinding
 import com.example.baseproject.ui.base.BaseActivity
 import com.example.baseproject.utils.arch.Result
-import com.example.baseproject.utils.arch.data
-import com.example.baseproject.utils.extension.error
 import com.example.baseproject.utils.extension.loading
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
