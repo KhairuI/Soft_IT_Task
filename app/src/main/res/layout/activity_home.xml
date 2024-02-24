@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/home"
+            android:textColor="@color/white"
+            app:fontFamily="@font/mulish_700"
+            android:padding="16dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_setting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_settings"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintBottom_toTopOf="@id/tvBuildTime">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/tv_email"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="@string/home"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+               android:gravity="center_horizontal"
+               android:layout_marginTop="4dp"
+               android:visibility="gone"
+               tools:visibility="visible"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"/>
+
+           <Button
+               android:id="@+id/btnSetUser"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Set User"
+               android:layout_margin="8dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/tv_email"/>
+
+           <Button
+               android:id="@+id/btnGetUser"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Get User"
+               android:layout_margin="8dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/btnSetUser"/>
+
+           <Button
+               android:id="@+id/btnPost"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="See Post"
+               android:layout_margin="8dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/btnGetUser"/>
+
+           <Button
+               android:id="@+id/btnNotification"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Send Notification"
+               android:layout_margin="8dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/btnPost"/>
+
+           <Button
+               android:id="@+id/btnFirebase"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Firebase"
+               android:layout_margin="8dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/btnNotification"/>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvBuildTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:fontFamily="@font/mulish_700"
+        tools:text="dd-MMM-yyyy, hh:mm a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
